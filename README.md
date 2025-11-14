@@ -104,3 +104,5 @@ You will need **Node.js** and **MongoDB** installed and running locally.
     ```bash
     npm run dev
     ```
+
+> **Note:** The backend API and frontend application must be running concurrently in **two separate terminal windows** for the full application to function.
