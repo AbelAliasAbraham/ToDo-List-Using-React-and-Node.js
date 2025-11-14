@@ -1,0 +1,170 @@
+/* --- Global & Layout --- */
+body { 
+    font-family: Arial, Helvetica, sans-serif; 
+    background: #f0f2f5; 
+    margin: 0; 
+    padding: 0; 
+}
+.container { 
+    width: 400px; 
+    max-width: 95%; 
+    margin: 50px auto; 
+    text-align: center; 
+}
+.card { 
+    background: #fff; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
+
+/* --- Input & Button Defaults --- */
+input[type="text"], 
+input[type="password"] { 
+    width: calc(100% - 22px); 
+    padding: 10px; 
+    margin: 8px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+button { 
+    padding: 8px 15px; 
+    margin: 5px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #4caf50; 
+    color: white; 
+    cursor: pointer; 
+    transition: background 0.3s; 
+}
+button:hover { 
+    background-color: #45a049; 
+}
+
+/* --- CORRECTED HEADER & NAVIGATION STYLES --- */
+.header {
+    background: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    /* Correction: Use Flexbox to separate title and nav */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+.header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    padding: 0; 
+    border-bottom: none; 
+}
+.nav {
+    display: flex;
+    justify-content: flex-end; /* Pushes buttons to the right */
+    align-items: center;
+    padding: 0; 
+    gap: 10px; /* Space between nav buttons */
+}
+.nav button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 5px 10px; /* Slightly reduced button padding */
+    font-size: 1em;
+    margin: 0; /* Removed margin override from generic button style */
+}
+.nav button:hover {
+    background-color: #45a049;
+}
+.nav button.nav-active {
+    background-color: #fff;
+    color: #4caf50;
+    font-weight: bold;
+}
+.nav button.logout {
+    background-color: #f44336;
+}
+.nav button.logout:hover { 
+    background-color: #d32f2f; 
+}
+
+
+/* --- Auth & Todo Section --- */
+.auth-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.add-todo {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 15px;
+}
+#todoInput {
+    flex-grow: 1;
+    margin: 0;
+    padding: 10px;
+}
+
+/* --- List Styles --- */
+ul { 
+    list-style: none; 
+    padding: 0; 
+    margin-top: 10px; 
+}
+li { 
+    background: #f9f9f9; 
+    padding: 10px; 
+    margin: 8px 0; 
+    border-radius: 5px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+li span { 
+    flex: 1; 
+    text-align: left; /* Ensures todo text aligns to the left within its container */
+    margin-left: 10px; 
+}
+.completed { 
+    text-decoration: line-through; 
+    color: gray; 
+}
+
+/* --- List Item Buttons --- */
+li button { 
+    padding: 5px 10px; 
+    font-size: 14px; 
+    margin-left: 5px;
+    background-color: #f44336; 
+}
+li button:hover { 
+    background-color: #d32f2f; 
+}
+
+li button.edit-btn, 
+li button.save-btn {
+    background-color: #2196F3;
+}
+li button.edit-btn:hover, 
+li button.save-btn:hover {
+    background-color: #1E88E5;
+}
+
+input[type="checkbox"] { 
+    width: 18px; 
+    height: 18px; 
+    cursor: pointer; 
+}
+
+/* Home button style */
+.card > button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
